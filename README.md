@@ -1,19 +1,23 @@
 # Github-Commit-Consumer-through-API-call
-```html
-<div style="background-color:black;color:white;padding:20px;">
-<ul>
-  <li>First install all packages</li>
-  <div style="background:#eeeeee;border:1px solid #cccccc;padding:5px 10px;">
+
+### First install all packages
+
+  ```html
     pip install -r requirements.txt
-  </div>
-  <li>Then Run python script</li>
-  <div style="background:#eeeeee;border:1px solid #cccccc;padding:5px 10px;">
+  ```
+### Then Run python script
+
+  ```html
     python -m githuballcommitscrpit.py
-  </div>
-  <li>Enter your github profile Token<li>
-  <div style="background:#eeeeee;border:1px solid #cccccc;padding:5px 10px;">
-    <a href="https://github.com/settings/tokens">You Can Click here for getting token page</a>
-  </div>
-</ul>
-</div>
-```
+  ```
+### Enter your github profile Token
+```html
+  You can goto the link and generate your token
+   ```
+<a href="https://github.com/settings/tokens">Github Token</a>
+  
+   or
+   ```html
+  Your profile-> Setting-> Developer settings->Personal access tokens
+    ```
+### Go to your script floder, you can see the commit list in a CSV file
