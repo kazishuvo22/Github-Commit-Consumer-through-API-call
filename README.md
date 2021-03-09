@@ -18,6 +18,7 @@
   
    or
    ```html
-  Your profile-> Setting-> Developer settings->Personal access tokens
+    Your profile-> Setting-> Developer settings->Personal access tokens
     ```
+
 ### Go to your script floder, you can see the commit list in a CSV file
