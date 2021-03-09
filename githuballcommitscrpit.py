@@ -10,6 +10,7 @@ from tqdm import tqdm
 import pandas as pd
 import json
 import shutil
+import io
 
 access_token = input("Enter Your User or Organization Github Token: ")
 g = Github(access_token)
@@ -30,7 +31,7 @@ for i in tqdm(repo_list):
     if not os.path.exists('jsonTemp'):
         os.makedirs('jsonTemp')
     
-    file  = open("jsonTemp/"+repo+".json","w")
+    file  = io.open("jsonTemp/"+repo+".json","w",encoding="utf-8")
     file.write(r.text)
     file.close()
 print("Write all data Successfully")
