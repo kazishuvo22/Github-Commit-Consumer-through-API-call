@@ -1,5 +1,5 @@
 # Github-Commit-Consumer-through-API-call
-
+```html
 <div style="background-color:black;color:white;padding:20px;">
 <ul>
   <li>First install all packages</li>
@@ -16,3 +16,4 @@
   </div>
 </ul>
 </div>
+```
