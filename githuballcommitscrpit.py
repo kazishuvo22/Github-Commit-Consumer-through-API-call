@@ -47,13 +47,13 @@ for i in tqdm(json_files[:]):
             data = json.loads(j.read())
             for s in range(len(data)):
                 df_nested_list = pd.json_normalize(data[s]['commit'])
-                if os.path.exists('my_csv.csv'):
+                if os.path.exists('GitCommitList.csv'):
                     append_write = 'a' # append if already exists
                     head = False
                 else:
                     append_write = 'w' # make a new file if not
                     head = True
-                df_nested_list.to_csv('my_csv.csv', mode=append_write, header=head)
+                df_nested_list.to_csv('GitCommitList.csv', mode=append_write, header=head)
     except:
         print('No commit/ Commit Error!! on '+ i)
 
