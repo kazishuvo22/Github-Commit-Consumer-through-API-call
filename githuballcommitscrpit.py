@@ -34,9 +34,12 @@ for i in tqdm(repo_list):
     file.write(r.text)
     file.close()
 print("Write all data Successfully")
+#     print('https://www.github.com/' + repo_name)
+
+
 
 json_files= glob.glob(os.path.join("jsonTemp/",'*.json'))
-print('Total file: '+(len(json_files))
+print(len(json_files))
 
 for i in tqdm(json_files[:]):
     try:
@@ -44,7 +47,7 @@ for i in tqdm(json_files[:]):
             data = json.loads(j.read())
             for s in range(len(data)):
                 df_nested_list = pd.json_normalize(data[s]['commit'])
-                if os.path.exists('gitCommit.csv'):
+                if os.path.exists('my_csv.csv'):
                     append_write = 'a' # append if already exists
                     head = False
                 else:
@@ -53,9 +56,13 @@ for i in tqdm(json_files[:]):
                 df_nested_list.to_csv('my_csv.csv', mode=append_write, header=head)
     except:
         print('No commit/ Commit Error!! on '+ i)
+
+
 try:
     shutil.rmtree('jsonTemp')
 except OSError as e:
     print("Error: %s : %s" % (dir_path, e.strerror))
-print('Done!!!!!!') 
+
+print('Done!!!!!!')
+
 
